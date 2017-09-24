@@ -5,86 +5,14 @@ Copyright (C) 2017 Shane Gill
 
 This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
-
-This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
-**/
-
-
-require("./oc-config.php");
-require("./oc-functions.php");
-include("./actions/profileActions.php");
-    session_start();
-
-    // TODO: Verify user has permission to be on this page
-
-    if (empty($_SESSION['logged_in']))
-    {
-        header('Location: ./index.php');
-        die("Not logged in");
-    }
-    else
-    {
-      $name = $_SESSION['name'];
-    }
-
-    $profileUpdate = "";
-    if (isset($_SESSION['profileUpdate']))
+ theasf
     {
         $profileUpdate = $_SESSION['profileUpdate'];
         unset($_SESSION['profileUpdate']);
-    }
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-	<?php include "./oc-includes/header.inc.php"; ?>
-
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="javascript:void(0)" class="site_title"><i class="fa fa-tachometer"></i> <span><?php echo COMMUNITY_NAME;?> User</span></a>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="<?php echo get_avatar() ?>" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Welcome,</span>
-                <h2><?php echo $name;?></h2>
-              </div>
-              <div class="clearfix"></div>
+    }asdf
             </div>
             <!-- /menu profile quick info -->
-
-            <br />
-
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                  <li class="active"><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu" style="display: block;">
-                      <li class="current-page"><a href="javascript:void(0)">My Profile</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <!-- ./ menu_section -->
-            </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
+asdfdden-small">
               <a data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
               </a>
@@ -99,33 +27,7 @@ include("./actions/profileActions.php");
               </a>
             </div>
             <!-- /menu footer buttons -->
-          </div>
-        </div>
-
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo get_avatar() ?>" alt=""><?php echo $name;?>
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="./actions/logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-
-              </ul>
-            </nav>
-          </div>
-        </div>
+          </div>asf
         <!-- /top navigation -->
 
         <!-- page content -->
